@@ -1,0 +1,97 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: url("big.jpg");
+}
+
+.container {
+	width: 1000px;
+	height: 450px;
+	margin: 60px auto 0;
+}
+
+.container > input {
+	display: none;
+}
+
+.slider {
+	position: relative;
+	margin: 0 auto;
+	width: 700px;
+	height: 300px;
+	overflow: hidden;
+	background-color: #000;
+	border: 8px solid #eee;
+	border-radius: 5px;
+	box-shadow: 0 7px 20px rgba(0,0,0,.5);
+}
+
+.slide {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transform: translateX(100%);
+	transition: transform 0.5s;
+}
+
+.slide .caption {
+	position: absolute;
+	width: 50%;
+	text-align: center;
+	background-image: linear-gradient(to right, transparent 0, #fff 15%, #fff 85%, transparent 100%);
+	color: #000000;
+	bottom: 10px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 1;
+}
+
+.slide img {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.slide-controls {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: relative;
+	margin: 10px auto 0;
+	width: 18%;
+	height: auto;
+}
+
+.slide-controls label {
+	display: block;
+	background: gray;
+	width: 22px;
+	height: 10px;
+	transition: background-color 0.3s;
+}
+
+#slide1:checked ~ .slide-controls [for="slide1"],
+#slide2:checked ~ .slide-controls [for="slide2"],
+#slide3:checked ~ .slide-controls [for="slide3"],
+#slide4:checked ~ .slide-controls [for="slide4"],
+#slide5:checked ~ .slide-controls [for="slide5"] {
+	background-color: orange;
+}
+
+#slide1:checked ~ .slider .slide1,
+#slide2:checked ~ .slider .slide2,
+#slide3:checked ~ .slider .slide3,
+#slide4:checked ~ .slider .slide4,
+#slide5:checked ~ .slider .slide5 {
+	transform: translateX(0);
+}
+
