@@ -8,39 +8,55 @@
 </head>
 	<body>
 		<div class="container">
-			<input type="radio" name="slides" id="slide1" checked>
-			<input type="radio" name="slides" id="slide2">
-			<input type="radio" name="slides" id="slide3">
-			<input type="radio" name="slides" id="slide4">
-			<input type="radio" name="slides" id="slide5">
-			<div class="slider">
-				<div class="slide slide1">
-					<div class="caption">Alpaca1</div>
-					<img src="1.jpg" alt="Alpaca1">
+			<div id="slider">
+				<input type="radio" name="slides" id="slide1" checked>
+				<input type="radio" name="slides" id="slide2">
+				<input type="radio" name="slides" id="slide3">
+				<input type="radio" name="slides" id="slide4">
+				<input type="radio" name="slides" id="slide5">
+				<div class="slider-content">
+					<div class="slide slide1">
+						<div class="caption">Alpaca1</div>
+						<img src="1.jpg" alt="Alpaca1">
+					</div>
+					<div class="slide slide2">
+						<div class="caption">Alpaca2</div>
+						<img src="2.jpg" alt="Alpaca2">
+					</div>
+					<div class="slide slide3">
+						<div class="caption">Alpaca3</div>
+						<img src="3.jpg" alt="Alpaca3">
+					</div>
+					<div class="slide slide4">
+						<div class="caption">Alpaca4</div>
+						<img src="4.jpg" alt="Alpaca4">
+					</div>
+					<div class="slide slide5">
+						<div class="caption">Alpaca5</div>
+						<img src="5.jpg" alt="Alpaca5">
+					</div>
 				</div>
-				<div class="slide slide2">
-					<div class="caption">Alpaca2</div>
-					<img src="2.jpg" alt="Alpaca2">
+				<div class="slide-controls">
+					<label for="slide1"></label>
+					<label for="slide2"></label>
+					<label for="slide3"></label>
+					<label for="slide4"></label>
+					<label for="slide5"></label>
 				</div>
-				<div class="slide slide3">
-					<div class="caption">Alpaca3</div>
-					<img src="3.jpg" alt="Alpaca3">
+				<div id="slick">
+					<div class="arrow left">
+						<label for="slide1"></label>
+						<label for="slide2"></label>
+						<label for="slide3"></label>
+						<label for="slide4"></label>
+					</div>
+					<div class="arrow right">
+						<label for="slide2"></label>
+						<label for="slide3"></label>
+						<label for="slide4"></label>
+						<label for="slide5"></label>
+					</div>
 				</div>
-				<div class="slide slide4">
-					<div class="caption">Alpaca4</div>
-					<img src="4.jpg" alt="Alpaca4">
-				</div>
-				<div class="slide slide5">
-					<div class="caption">Alpaca5</div>
-					<img src="5.jpg" alt="Alpaca5">
-				</div>
-			</div>
-			<div class="slide-controls">
-				<label for="slide1"></label>
-				<label for="slide2"></label>
-				<label for="slide3"></label>
-				<label for="slide4"></label>
-				<label for="slide5"></label>
 			</div>
 		</div>
 	</body>
